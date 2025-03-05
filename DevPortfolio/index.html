@@ -36,6 +36,8 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
 </head>
 
 <body class="index-page">
@@ -616,8 +618,8 @@
                     <div class="portfolio-actions">
                       <a href="assets/img/portfolio/Processing-Management-System.png" class="glightbox preview-link"
                         data-gallery="portfolio-gallery-custom"><i class="bi bi-eye"></i></a>
-                      <a href="http://aussiegrill.digital1010.dev" class="details-link"
-                        target="_blank"><i class="bi bi-arrow-right"></i></a>
+                      <a href="http://aussiegrill.digital1010.dev" class="details-link" target="_blank"><i
+                          class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -1090,10 +1092,9 @@
         <div class="row g-5">
           <div class="col-lg-6">
             <div class="content" data-aos="fade-up" data-aos-delay="200">
-              <div class="section-category mb-3">Contact</div>
-              <h2 class="display-5 mb-4">Nemo enim ipsam voluptatem quia voluptas aspernatur</h2>
-              <p class="lead mb-4">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-                laboriosam.</p>
+              <div class="section-category mb-3">Contact Us</div>
+              <h2 class="display-5 mb-4">Let’s Connect & Build Together</h2>
+              <p class="lead mb-4">I’m always open to new opportunities and discussions.</p>
 
               <div class="contact-info mt-5">
                 <div class="info-item d-flex mb-3">
@@ -1118,13 +1119,15 @@
             <div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
               <div class="card-body p-4 p-lg-5">
 
-                <form action="forms/contact.php" method="post" class="php-email-form">
+                <form action="https://formsubmit.co/st9889477@gmail.com" method="POST" class="php-email-form">
                   <div class="row gy-4">
 
                     <div class="col-12">
                       <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
                     </div>
 
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/DevPortfolio/index.html">
                     <div class="col-12 ">
                       <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
                     </div>
@@ -1134,7 +1137,7 @@
                     </div>
 
                     <div class="col-12">
-                      <textarea class="form-control" name="message" rows="6" placeholder="Message"
+                      <textarea class="form-control" name="messages" rows="6" placeholder="Message"
                         required=""></textarea>
                     </div>
 
@@ -1161,7 +1164,38 @@
 
   </main>
 
+  <script type="text/javascript">
+    // const form = document.querySelector('.php-email-form');
 
+    // function sendEmail() {
+    //   const loginForm = document.getElementById("loginForm");
+
+    //   const email = document.getElementsByName('email')[0].value;
+
+    //   const subject = document.getElementsByName('subject')[0].value;
+
+    //   const messages = document.getElementsByName('messages')[0].value;
+
+    //   Email.send({
+    //     Host: "smtp.gmail.com",
+    //     Username:"st9889477@gmail.com",
+    //     Password: "ozhd tltm ginu kbvf",
+    //     To: 'st9889477@gmail.com',
+    //     From: email,
+    //     Subject: subject,
+    //     Body: messages
+    //   }).then(
+    //     message => alert(message)
+    //   );
+
+    // }
+
+    // form.addEventListener('submit', (e) => {
+    //   e.preventDefault();
+
+    //   sendEmail();
+    // });
+  </script>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
@@ -1169,16 +1203,18 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  -->
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
 
 </body>
 
