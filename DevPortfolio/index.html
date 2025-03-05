@@ -29,15 +29,17 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: EasyFolio
-  * Template URL: https://bootstrapmade.com/easyfolio-bootstrap-portfolio-template/
-  * Updated: Feb 21 2025 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
 
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "B3cYM2iG0I6Ri6hx2",
+      });
+    })();
+  </script>
+  <!-- <script src="sendEmail.js"></script> -->
 </head>
 
 <body class="index-page">
@@ -727,9 +729,9 @@
 
     </section><!-- /Portfolio Section -->
 
-    
 
-   <!-- /Services Section -->
+
+    <!-- /Services Section -->
 
     <!-- Faq Section -->
 
@@ -860,15 +862,15 @@
             <div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
               <div class="card-body p-4 p-lg-5">
 
-                <form action="https://formsubmit.co/st9889477@gmail.com" method="POST" class="php-email-form">
+                <form method="POST" class="php-email-form" id="loginForm">
                   <div class="row gy-4">
 
                     <div class="col-12">
                       <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
                     </div>
 
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/DevPortfolio/index.html">
+                    <!-- <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/DevPortfolio/index.html"> -->
                     <div class="col-12 ">
                       <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
                     </div>
@@ -878,7 +880,7 @@
                     </div>
 
                     <div class="col-12">
-                      <textarea class="form-control" name="messages" rows="6" placeholder="Message"
+                      <textarea class="form-control" name="message" rows="6" placeholder="Message"
                         required=""></textarea>
                     </div>
 
@@ -887,7 +889,7 @@
                       <div class="error-message"></div>
                       <div class="sent-message">Your message has been sent. Thank you!</div>
 
-                      <button type="submit" class="btn btn-submit w-100">Submit Message</button>
+                      <button type="submit" class="btn btn-submit w-100" onclick="sendEmail()">Submit Message</button>
                     </div>
 
                   </div>
@@ -906,36 +908,72 @@
   </main>
 
   <script type="text/javascript">
-    // const form = document.querySelector('.php-email-form');
 
-    // function sendEmail() {
-    //   const loginForm = document.getElementById("loginForm");
+    const form = document.getElementById('loginForm')
 
-    //   const email = document.getElementsByName('email')[0].value;
+    function sendEmail() {
 
-    //   const subject = document.getElementsByName('subject')[0].value;
+      let name = document.getElementsByName("name")[0].value.trim();
+      let email = document.getElementsByName("email")[0].value.trim();
+      let subject = document.getElementsByName("subject")[0].value.trim();
+      let message = document.getElementsByName("message")[0].value.trim();
 
-    //   const messages = document.getElementsByName('messages')[0].value;
+      let isValid = true;
 
-    //   Email.send({
-    //     Host: "smtp.gmail.com",
-    //     Username:"st9889477@gmail.com",
-    //     Password: "ozhd tltm ginu kbvf",
-    //     To: 'st9889477@gmail.com',
-    //     From: email,
-    //     Subject: subject,
-    //     Body: messages
-    //   }).then(
-    //     message => alert(message)
-    //   );
+      // Clear previous error messages
+      document.querySelectorAll(".error-text").forEach(el => el.innerText = "");
 
-    // }
+      // Validate fields
+      if (name === "") {
+        document.getElementById("nameError").innerText = "Name is required.";
+        isValid = false;
+      }
+      if (email === "") {
+        document.getElementById("emailError").innerText = "Email is required.";
+        isValid = false;
+      } else if (!/^\S+@\S+\.\S+$/.test(email)) { // Email regex validation
+        document.getElementById("emailError").innerText = "Enter a valid email.";
+        isValid = false;
+      }
+      if (subject === "") {
+        document.getElementById("subjectError").innerText = "Subject is required.";
+        isValid = false;
+      }
+      if (message === "") {
+        document.getElementById("messageError").innerText = "Message is required.";
+        isValid = false;
+      }
 
-    // form.addEventListener('submit', (e) => {
-    //   e.preventDefault();
+      // Stop execution if validation fails
+      if (!isValid) return;
 
-    //   sendEmail();
-    // });
+      // Show loading
+      document.querySelector(".loading").style.display = "block";
+      document.querySelector(".sent-message").style.display = "none";
+      document.querySelector(".error-message").style.display = "none";
+
+      let params = { name, email, subject, message };
+
+      emailjs.send("service_u74ymck", "template_8gctvzr", params)
+        .then(() => {
+          document.querySelector(".loading").style.display = "none";  // Hide loading
+          document.querySelector(".sent-message").style.display = "block"; // Show success message
+          document.getElementById("loginForm").reset(); // Clear form
+        })
+        .catch(error => {
+          document.querySelector(".loading").style.display = "none";  // Hide loading
+          document.querySelector(".error-message").innerText = "Error sending email: " + error;
+          document.querySelector(".error-message").style.display = "block"; // Show error message
+        });
+
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      sendEmail();
+    });
+
   </script>
 
   <!-- Scroll Top -->
