@@ -36,6 +36,8 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
 </head>
 
 <body class="index-page">
@@ -537,8 +539,6 @@
               stroke-width="2"></path>
           </svg>
         </div>
-        <!-- <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel
-          illum qui dolorem</p> -->
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -548,8 +548,8 @@
           <div class="portfolio-filters-container" data-aos="fade-up" data-aos-delay="200">
             <ul class="portfolio-filters isotope-filters">
               <li data-filter="*" class="filter-active">All Work</li>
-              <li data-filter=".filter-web">CMS Based Developement</li>
-              <li data-filter=".filter-graphics">Custom Based Development</li>
+              <li data-filter=".filter-cms">CMS Based Developement</li>
+              <li data-filter=".filter-custom">Custom Based Development</li>
               <!-- <li data-filter=".filter-motion">Motion</li>
               <li data-filter=".filter-brand">Branding</li> -->
             </ul>
@@ -557,107 +557,165 @@
 
           <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
 
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-cms">
               <div class="portfolio-card">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid" alt="" loading="lazy">
+                  <img src="assets/img/portfolio/GuildSuper.png" class="img-fluid" alt="" loading="lazy">
                   <div class="portfolio-overlay">
                     <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/portfolio-1.webp" class="glightbox preview-link"
-                        data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+                      <a href="assets/img/portfolio/GuildSuper.png" class="glightbox preview-link"
+                        data-gallery="portfolio-gallery-cms"><i class="bi bi-eye"></i></a>
+                      <a href="https://www.guildsuper.com.au" class="details-link" target="_blank"><i
+                          class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
                 <div class="portfolio-content">
-                  <span class="category">Web Design</span>
-                  <h3>Modern Dashboard Interface</h3>
-                  <p>Maecenas faucibus mollis interdum sed posuere consectetur est at lobortis.</p>
+                  <span class="category">CMS Based Developement</span>
+                  <h3>GuildSuper</h3>
+                  <p>
+                    <i>
+                      "worked on creating and structuring pages using
+                      Sitefinity CMS. I was responsible for designing responsive layouts, customizing dynamic module,
+                      and
+                      ensuring seamless content integration.
+                    </i>
+                  </p>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-graphics">
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-cms">
               <div class="portfolio-card">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/portfolio-10.webp" class="img-fluid" alt="" loading="lazy">
+                  <img src="assets/img/portfolio/BlackBox.png" class="img-fluid" alt="" loading="lazy">
                   <div class="portfolio-overlay">
                     <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/portfolio-10.webp" class="glightbox preview-link"
-                        data-gallery="portfolio-gallery-graphics"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+                      <a href="assets/img/portfolio/BlackBox.png" class="glightbox preview-link"
+                        data-gallery="portfolio-gallery-cms"><i class="bi bi-eye"></i></a>
+                      <a href="https://www.blackbox.com" class="details-link" target="_blank"><i
+                          class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
                 <div class="portfolio-content">
-                  <span class="category">Graphics</span>
-                  <h3>Creative Brand Identity</h3>
-                  <p>Vestibulum id ligula porta felis euismod semper at vulputate.</p>
+                  <span class="category">CMS Based Developement</span>
+                  <h3>BlackBox</h3>
+                  <p><i>"Worked on language translation and content filtration for case studies, ensuring accuracy and
+                      consistency across multiple languages. Implemented filtering mechanisms for better content
+                      presentation and user experience."</i></p>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-motion">
+            <!-- End Portfolio Item -->
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-cms">
               <div class="portfolio-card">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/portfolio-7.webp" class="img-fluid" alt="" loading="lazy">
+                  <img src="assets/img/portfolio/Aussiegrill.png" class="img-fluid" alt="" loading="lazy">
                   <div class="portfolio-overlay">
                     <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/portfolio-7.webp" class="glightbox preview-link"
-                        data-gallery="portfolio-gallery-motion"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+                      <a href="assets/img/portfolio/Processing-Management-System.png" class="glightbox preview-link"
+                        data-gallery="portfolio-gallery-custom"><i class="bi bi-eye"></i></a>
+                      <a href="http://aussiegrill.digital1010.dev" class="details-link" target="_blank"><i
+                          class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
                 <div class="portfolio-content">
-                  <span class="category">Motion</span>
-                  <h3>Product Animation Reel</h3>
-                  <p>Donec ullamcorper nulla non metus auctor fringilla dapibus.</p>
+                  <span class="category">CMS Based Developement</span>
+                  <h3>Aussiegrill</h3>
+                  <p><i>
+                      "Contributed to the Aussie Grill project by designing and structuring web pages using Sitefinity
+                      CMS. Developed dynamic modules for better content management, ensured responsive layouts, and
+                      customized templates for a seamless user experience."
+                    </i></p>
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-brand">
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-cms">
               <div class="portfolio-card">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/portfolio-4.webp" class="img-fluid" alt="" loading="lazy">
+                  <img src="assets/img/portfolio/Processing-Management-System.png" class="img-fluid" alt=""
+                    loading="lazy">
                   <div class="portfolio-overlay">
                     <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/portfolio-4.webp" class="glightbox preview-link"
-                        data-gallery="portfolio-gallery-brand"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+                      <a href="assets/img/portfolio/Processing-Management-System.png" class="glightbox preview-link"
+                        data-gallery="portfolio-gallery-custom"><i class="bi bi-eye"></i></a>
+                      <a href="https://processing-management-system-react.vercel.app" class="details-link"
+                        target="_blank"><i class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
                 <div class="portfolio-content">
-                  <span class="category">Branding</span>
-                  <h3>Luxury Brand Package</h3>
-                  <p>Aenean lacinia bibendum nulla sed consectetur elit.</p>
+                  <span class="category">Custom Based Developement</span>
+                  <h3>Processing-Management-System</h3>
+                  <p>
+                    <i>
+                      "Developed a system to streamline workflow operations with React.js, Node.js, and MongoDB. Built a
+                      dynamic UI, implemented backend logic, and optimized performance for seamless data processing."
+                    </i>
+                  </p>
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-custom">
               <div class="portfolio-card">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/portfolio-2.webp" class="img-fluid" alt="" loading="lazy">
+                  <img src="assets/img/portfolio/Rent-Management-System.png" class="img-fluid" alt="" loading="lazy">
                   <div class="portfolio-overlay">
                     <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/portfolio-2.webp" class="glightbox preview-link"
-                        data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+                      <a href="assets/img/portfolio/Aussiegrill.png" class="glightbox preview-link"
+                        data-gallery="portfolio-gallery-cms"><i class="bi bi-eye"></i></a>
+                      <a href="https://rms-react.vercel.app" class="details-link" target="_blank"><i
+                          class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
                 <div class="portfolio-content">
-                  <span class="category">Web Design</span>
-                  <h3>E-commerce Platform</h3>
-                  <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <span class="category">Custom Based Developement</span>
+                  <h3>Rent-Management-System</h3>
+                  <p>
+                    <i>
+                      "Designed and developed a comprehensive rental management system using React.js, Node.js, and
+                      MongoDB. Implemented tenant management, rent tracking, and automated calculations to enhance
+                      efficiency and user experience."
+                    </i>
+                  </p>
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-graphics">
+            <!-- <div class="col-lg-6 col-md-6 portfolio-item isotope-item ">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="assets/img/portfolio/Aussiegrill.png" class="img-fluid" alt="" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-actions">
+                      <a href="assets/img/portfolio/Aussiegrill.png" class="glightbox preview-link"
+                        data-gallery="portfolio-gallery-cms"><i class="bi bi-eye"></i></a>
+                      <a href="https://aussiegrill.digital1010.dev" class="details-link" target="_blank"><i
+                          class="bi bi-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-content">
+                  <span class="category">CMS Based Development</span>
+                  <h3>Aussiegrill</h3>
+                  <p><i>
+                      "Contributed to the Aussie Grill project by designing and structuring web pages using Sitefinity
+                      CMS. Developed dynamic modules for better content management, ensured responsive layouts, and
+                      customized templates for a seamless user experience."
+                    </i></p>
+                </div>
+              </div>
+            </div> -->
+
+
+            <!-- <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-graphics">
               <div class="portfolio-card">
                 <div class="portfolio-image">
                   <img src="assets/img/portfolio/portfolio-11.webp" class="img-fluid" alt="" loading="lazy">
@@ -675,7 +733,9 @@
                   <p>Cras mattis consectetur purus sit amet fermentum.</p>
                 </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div> -->
+
+            <!-- End Portfolio Item -->
 
           </div><!-- End Portfolio Container -->
 
@@ -791,10 +851,9 @@
         <div class="row g-5">
           <div class="col-lg-6">
             <div class="content" data-aos="fade-up" data-aos-delay="200">
-              <div class="section-category mb-3">Contact</div>
-              <h2 class="display-5 mb-4">Nemo enim ipsam voluptatem quia voluptas aspernatur</h2>
-              <p class="lead mb-4">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-                laboriosam.</p>
+              <div class="section-category mb-3">Contact Us</div>
+              <h2 class="display-5 mb-4">Let’s Connect & Build Together</h2>
+              <p class="lead mb-4">I’m always open to new opportunities and discussions.</p>
 
               <div class="contact-info mt-5">
                 <div class="info-item d-flex mb-3">
@@ -819,13 +878,15 @@
             <div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
               <div class="card-body p-4 p-lg-5">
 
-                <form action="forms/contact.php" method="post" class="php-email-form">
+                <form action="https://formsubmit.co/st9889477@gmail.com" method="POST" class="php-email-form">
                   <div class="row gy-4">
 
                     <div class="col-12">
                       <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
                     </div>
 
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/DevPortfolio/index.html">
                     <div class="col-12 ">
                       <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
                     </div>
@@ -835,7 +896,7 @@
                     </div>
 
                     <div class="col-12">
-                      <textarea class="form-control" name="message" rows="6" placeholder="Message"
+                      <textarea class="form-control" name="messages" rows="6" placeholder="Message"
                         required=""></textarea>
                     </div>
 
@@ -862,7 +923,38 @@
 
   </main>
 
+  <script type="text/javascript">
+    // const form = document.querySelector('.php-email-form');
 
+    // function sendEmail() {
+    //   const loginForm = document.getElementById("loginForm");
+
+    //   const email = document.getElementsByName('email')[0].value;
+
+    //   const subject = document.getElementsByName('subject')[0].value;
+
+    //   const messages = document.getElementsByName('messages')[0].value;
+
+    //   Email.send({
+    //     Host: "smtp.gmail.com",
+    //     Username:"st9889477@gmail.com",
+    //     Password: "ozhd tltm ginu kbvf",
+    //     To: 'st9889477@gmail.com',
+    //     From: email,
+    //     Subject: subject,
+    //     Body: messages
+    //   }).then(
+    //     message => alert(message)
+    //   );
+
+    // }
+
+    // form.addEventListener('submit', (e) => {
+    //   e.preventDefault();
+
+    //   sendEmail();
+    // });
+  </script>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
@@ -870,16 +962,18 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  -->
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
 
 </body>
 
