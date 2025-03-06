@@ -957,7 +957,15 @@
       emailjs.send("service_u74ymck", "template_8gctvzr", params)
         .then(() => {
           document.querySelector(".loading").style.display = "none";  // Hide loading
-          document.querySelector(".sent-message").style.display = "block"; // Show success message
+
+          let sentMessage = document.querySelector(".sent-message");
+          sentMessage.style.display = "block"; // Show success message
+
+          // Hide success message after 3 seconds
+          setTimeout(() => {
+            sentMessage.style.display = "none";
+          }, 3000);
+
           document.getElementById("loginForm").reset(); // Clear form
         })
         .catch(error => {
@@ -989,12 +997,10 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  -->
-
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="https://dunggramer.github.io/disable-devtool/disable-devtool.min.js" defer></script>
-  <!-- <script src="disable.js"></script> -->
+  <script src="disable.js"></script>
 
 </body>
 
